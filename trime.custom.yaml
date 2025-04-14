@@ -1,0 +1,21 @@
+# Trime 自定义
+patch:
+  "style/locale": zh_CN # 添加为汉语简体
+  "style/show_preview": false #按鍵提示
+  "style/show_comment": false #顯示提示區
+  "style/key_sound": false
+  "style/color_scheme": lost_temple
+  
+  # 键盘布局切换按钮
+  "style/keyboard_switch_button": true
+  "style/keyboard_switch_button_text": "布局"
+  "style/keyboard_switch_button_position": "right"
+  "style/keyboard_switch_button_width": 60
+  "style/keyboard_switch_button_height": 40
+  "style/keyboard_switch_button_margin": 5
+  "style/keyboard_switch_button_text_size": 16
+  "style/keyboard_switch_button_text_color": 0xFFFFFFFF
+  "style/keyboard_switch_button_background_color": 0x4D000000
+  "style/keyboard_switch_button_corner_radius": 4
+  "style/keyboard_switch_button_elevation": 2
+...
