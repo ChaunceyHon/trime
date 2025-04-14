@@ -18,4 +18,29 @@ patch:
   "style/keyboard_switch_button_background_color": 0x4D000000
   "style/keyboard_switch_button_corner_radius": 4
   "style/keyboard_switch_button_elevation": 2
+
+  # 键盘布局配置
+  "preset_keyboards/nine_grid":
+    name: 九宫格
+    author: "modified from default"
+    rows:
+      - keys: [",", "@/.", "2", "3", "4", "BackSpace"]
+        labels: [",", "@/.", "ABC", "DEF", "GHI", "⌫"]
+      - keys: ["。", "1", "5", "6", "7", "重输"]
+        labels: ["。", "1", "JKL", "MNO", "PQRS", "重输"]
+      - keys: ["?", "4", "8", "9", "0", "0"]
+        labels: ["?", "4", "TUV", "WXYZ", "0", "0"]
+      - keys: ["符", "123", "space", "中", "搜索"]
+        labels: ["符", "123", "space", "中", "搜索"]
+    ascii_mode: 0
+    width: 10
+    height: 55
+    keys:
+      space: {width: 3}
+      BackSpace: {width: 1.5}
+      重输: {width: 1.5}
+      搜索: {width: 1.5}
+
+  "style/keyboards": [nine_grid, default]
+  "style/keyboard_type": nine_grid
 ...
