@@ -41,6 +41,28 @@ patch:
       重输: {width: 1.5}
       搜索: {width: 1.5}
 
+  "preset_keyboards/default":
+    name: 24键
+    author: "modified from default"
+    ascii_mode: 0
+    width: 10
+    height: 55
+    keys:
+      space: {width: 3}
+      BackSpace: {width: 1.5}
+      重输: {width: 1.5}
+      搜索: {width: 1.5}
+
   "style/keyboards": [nine_grid, default]
   "style/keyboard_type": nine_grid
+
+  # 开关状态
+  "switches/@0/reset": 0
+  "switches/@0/states": [ 中文, 西文 ]
+  "switches/@1/states": [ 半角, 全角 ]
+  "switches/@2/reset": 1
+  "switches/@2/states": [ 漢字, 汉字 ]
+  "switches/@3/states": [ 。，, ．， ]
+  "switches/@4/reset": 0
+  "switches/@4/states": [ 九宫格, 24键 ]
 ...

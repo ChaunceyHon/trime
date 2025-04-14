@@ -23,9 +23,9 @@ switches:
     states: [ 漢字, 汉字 ]
   - name: ascii_punct
     states: [ 。，, ．， ]
-  - name: keyboard_type
+  - name: _keyboard_
     reset: 0
-    states: [ nine_grid, default ]
+    states: [ 九宫格, 24键 ]
 
 translator:
   prism: luna_pinyin_simp
@@ -37,8 +37,8 @@ key_binder:
   bindings:
     - { when: always, accept: Control+Shift+4, toggle: zh_simp }
     - { when: always, accept: Control+Shift+dollar, toggle: zh_simp }
-    - { when: always, accept: Control+Shift+9, toggle: keyboard_type }
-    - { when: always, accept: Control+Shift+parenleft, toggle: keyboard_type }
+    - { when: always, accept: Control+Shift+9, toggle: _keyboard_ }
+    - { when: always, accept: Control+Shift+parenleft, toggle: _keyboard_ }
 
 keyboard:
   layout:
