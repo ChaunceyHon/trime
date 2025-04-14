@@ -9,7 +9,7 @@ patch:
   # 键盘布局切换按钮
   "style/keyboard_switch_button": true
   "style/keyboard_switch_button_text": "布局"
-  "style/keyboard_switch_button_position": "right"
+  "style/keyboard_switch_button_position": "top"
   "style/keyboard_switch_button_width": 60
   "style/keyboard_switch_button_height": 40
   "style/keyboard_switch_button_margin": 5
