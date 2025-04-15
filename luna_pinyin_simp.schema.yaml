@@ -23,7 +23,7 @@ switches:
     states: [ 漢字, 汉字 ]
   - name: ascii_punct
     states: [ 。，, ．， ]
-  - name: _keyboard_
+  - name: keyboard_type
     reset: 0
     states: [ 九宫格, 24键 ]
 
@@ -37,8 +37,8 @@ key_binder:
   bindings:
     - { when: always, accept: Control+Shift+4, toggle: zh_simp }
     - { when: always, accept: Control+Shift+dollar, toggle: zh_simp }
-    - { when: always, accept: Control+Shift+9, toggle: _keyboard_ }
-    - { when: always, accept: Control+Shift+parenleft, toggle: _keyboard_ }
+    - { when: always, accept: Control+Shift+9, toggle: keyboard_type }
+    - { when: always, accept: Control+Shift+parenleft, toggle: keyboard_type }
 
 keyboard:
   layout:

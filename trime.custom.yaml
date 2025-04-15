@@ -6,10 +6,12 @@ patch:
   "style/key_sound": false
   "style/color_scheme": lost_temple
   
-  # 键盘布局切换按钮
-  "style/keyboard_switch_button": true
-  "style/keyboard_switch_button_text": "布局"
-  "style/keyboard_switch_button_position": "top"
+  # 键盘布局和切换按钮配置
+  "style/keyboard_type": nine_grid  # 默认使用九宫格
+  "style/keyboards": [nine_grid, default]  # 可用的键盘布局
+  "style/keyboard_switch_button": true  # 显示键盘切换按钮
+  "style/keyboard_switch_button_text": "切换"
+  "style/keyboard_switch_button_position": "right"
   "style/keyboard_switch_button_width": 60
   "style/keyboard_switch_button_height": 40
   "style/keyboard_switch_button_margin": 5
@@ -23,38 +25,37 @@ patch:
   "preset_keyboards/nine_grid":
     name: 九宫格
     author: "modified from default"
-    rows:
-      - keys: [",", "@/.", "2", "3", "4", "BackSpace"]
-        labels: [",", "@/.", "ABC", "DEF", "GHI", "⌫"]
-      - keys: ["。", "1", "5", "6", "7", "重输"]
-        labels: ["。", "1", "JKL", "MNO", "PQRS", "重输"]
-      - keys: ["?", "4", "8", "9", "0", "0"]
-        labels: ["?", "4", "TUV", "WXYZ", "0", "0"]
-      - keys: ["符", "123", "space", "中", "搜索"]
-        labels: ["符", "123", "space", "中", "搜索"]
     ascii_mode: 0
-    width: 10
-    height: 55
+    width: 33%
+    height: 44%
     keys:
-      space: {width: 3}
-      BackSpace: {width: 1.5}
-      重输: {width: 1.5}
-      搜索: {width: 1.5}
+      - {click: 1, label: "1", hint: "一", swipe_up: "！"}
+      - {click: 2, label: "2", hint: "ABC", swipe_up: "@"}
+      - {click: 3, label: "3", hint: "DEF", swipe_up: "#"}
+      - {click: 4, label: "4", hint: "GHI", swipe_up: "$"}
+      - {click: 5, label: "5", hint: "JKL", swipe_up: "%"}
+      - {click: 6, label: "6", hint: "MNO", swipe_up: "^"}
+      - {click: 7, label: "7", hint: "PQRS", swipe_up: "&"}
+      - {click: 8, label: "8", hint: "TUV", swipe_up: "*"}
+      - {click: 9, label: "9", hint: "WXYZ", swipe_up: "("}
+      - {click: "Keyboard_switch", label: "切换"}
+      - {click: 0, label: "0", hint: "空格", swipe_up: ")"}
+      - {click: BackSpace, label: "删除"}
 
   "preset_keyboards/default":
     name: 24键
     author: "modified from default"
     ascii_mode: 0
-    width: 10
-    height: 55
+    width: 10%
+    height: 44%
     keys:
+      - [q, w, e, r, t, y, u, i, o, p]
+      - [a, s, d, f, g, h, j, k, l]
+      - [z, x, c, v, b, n, m]
       space: {width: 3}
       BackSpace: {width: 1.5}
       重输: {width: 1.5}
       搜索: {width: 1.5}
-
-  "style/keyboards": [nine_grid, default]
-  "style/keyboard_type": nine_grid
 
   # 开关状态
   "switches/@0/reset": 0
@@ -65,4 +66,39 @@ patch:
   "switches/@3/states": [ 。，, ．， ]
   "switches/@4/reset": 0
   "switches/@4/states": [ 九宫格, 24键 ]
+
+  style:
+    keyboard_type: default  # 默认使用全键盘
+    keyboards: [ nine_grid, default ]  # 可用的键盘布局
+    keyboard_switch_button: true  # 显示键盘切换按钮
+    keyboard_switch_button_position: right  # 按钮位置在右侧
+    keyboard_switch_button_size: 40  # 按钮大小
+
+  preset_keyboards:
+    nine_grid:
+      name: 九宫格
+      author: TRIME
+      width: 33%
+      height: 44%
+      keys:
+        - {click: 1, label: "1", hint: "一", swipe_up: "！"}
+        - {click: 2, label: "2", hint: "ABC", swipe_up: "@"}
+        - {click: 3, label: "3", hint: "DEF", swipe_up: "#"}
+        - {click: 4, label: "4", hint: "GHI", swipe_up: "$"}
+        - {click: 5, label: "5", hint: "JKL", swipe_up: "%"}
+        - {click: 6, label: "6", hint: "MNO", swipe_up: "^"}
+        - {click: 7, label: "7", hint: "PQRS", swipe_up: "&"}
+        - {click: 8, label: "8", hint: "TUV", swipe_up: "*"}
+        - {click: 9, label: "9", hint: "WXYZ", swipe_up: "("}
+        - {click: "Keyboard_switch", label: "切换"}
+        - {click: 0, label: "0", hint: "空格", swipe_up: ")"}
+        - {click: BackSpace, label: "删除"}
+
+    default:
+      name: 全键盘
+      author: TRIME
+      height: 44%
+      width: 10%
+      keys:
+        # ... existing code ...
 ...
