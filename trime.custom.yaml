@@ -7,8 +7,8 @@ patch:
   "style/color_scheme": lost_temple
   
   # 键盘布局和切换按钮配置
-  "style/keyboard_type": default  # 默认使用全键盘
-  "style/keyboards": [nine_grid, default]  # 可用的键盘布局
+  "style/keyboard_type": "default"  # 默认使用全键盘
+  "style/keyboards": ["nine_grid", "default"]  # 可用的键盘布局
   "style/keyboard_switch_button": true  # 显示键盘切换按钮
   "style/keyboard_switch_button_text": "切换"
   "style/keyboard_switch_button_position": "right"
@@ -23,7 +23,7 @@ patch:
 
   # 九宫格键盘配置
   "preset_keyboards/nine_grid":
-    name: 九宫格
+    name: "九宫格"
     author: "trime"
     ascii_mode: 0
     height: 44%
@@ -54,7 +54,7 @@ patch:
 
   # 全键盘配置
   "preset_keyboards/default":
-    name: 全键盘
+    name: "全键盘"
     author: "trime"
     ascii_mode: 0
     width: 10%
@@ -67,13 +67,13 @@ patch:
 
   # 开关状态
   "switches/@0/reset": 0
-  "switches/@0/states": [ 中文, 西文 ]
-  "switches/@1/states": [ 半角, 全角 ]
+  "switches/@0/states": [ "中文", "西文" ]
+  "switches/@1/states": [ "半角", "全角" ]
   "switches/@2/reset": 1
-  "switches/@2/states": [ 漢字, 汉字 ]
-  "switches/@3/states": [ 。，, ．， ]
+  "switches/@2/states": [ "漢字", "汉字" ]
+  "switches/@3/states": [ "。，", "．，" ]
   "switches/@4/reset": 0
-  "switches/@4/states": [ 九宫格, 全键盘 ]
+  "switches/@4/states": [ "九宫格", "全键盘" ]
 
   style:
     keyboard_type: default  # 默认使用全键盘
