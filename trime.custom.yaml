@@ -109,3 +109,12 @@ patch:
       width: 10%
       keys:
         # ... existing code ...
+
+  # 键盘切换快捷键
+  "key_binder/bindings":
+    - { when: always, accept: Control+Shift+space, select: .next }
+    - { when: always, accept: Control+Shift+1, select: .next }
+    - { when: always, accept: Control+Shift+2, toggle: ascii_mode }
+    - { when: always, accept: Control+Shift+3, toggle: full_shape }
+    - { when: always, accept: Control+Shift+4, toggle: simplification }
+    - { when: always, accept: Control+Shift+5, toggle: extended_charset }
