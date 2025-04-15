@@ -1,0 +1,32 @@
+# Rime default settings
+# encoding: utf-8
+
+config_version: "1.0"
+key_binder:
+  bindings:
+    - {accept: "Control+Shift+1", toggle: ascii_mode, when: always}
+    - {accept: "Control+Shift+2", toggle: full_shape, when: always}
+    - {accept: "Control+Shift+3", toggle: simplification, when: always}
+    - {accept: "Control+Shift+4", toggle: keyboard_mode, when: always}
+
+menu:
+  page_size: 5
+  alternative_select_labels: [ ①, ②, ③, ④, ⑤ ]
+
+schema_list:
+  - schema: jiuyi_pinyin
+
+switcher:
+  caption: 输入方案
+  hotkeys:
+    - F4
+  save_options:
+    - full_shape
+    - ascii_mode
+    - keyboard_mode
+    - simplification
+  options:
+    - {name: ascii_mode, states: ["中文", "英文"]}
+    - {name: full_shape, states: ["半角", "全角"]}
+    - {name: keyboard_mode, states: ["全键盘", "九宫格"]}
+    - {name: simplification, states: ["漢字", "汉字"]} 

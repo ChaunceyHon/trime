@@ -1,0 +1,55 @@
+# Rime dictionary
+# encoding: utf-8
+
+---
+name: jiuyi_pinyin
+version: "1.0"
+sort: by_weight
+use_preset_vocabulary: true
+...
+
+# 基础词组
+中文	zhong wen
+汉字	han zi
+漢字	han zi
+拼音	pin yin
+输入法	shu ru fa
+九宫格	jiu gong ge
+全角	quan jiao
+半角	ban jiao
+简体	jian ti
+繁體	fan ti
+切换	qie huan
+空格	kong ge
+回车	hui che
+删除	shan chu
+重输	chong shu
+符号	fu hao
+
+# 常用短语
+你好	ni hao
+谢谢	xie xie
+再见	zai jian
+早上好	zao shang hao
+晚上好	wan shang hao
+请问	qing wen
+对不起	dui bu qi
+没关系	mei guan xi
+
+# 标点符号
+。	.
+，	,
+！	!
+？	?
+：	:
+；	;
+"	"
+"	"
+'	'
+'	'
+（	(
+）	)
+【	[
+】	]
+、	\
+～	~ 

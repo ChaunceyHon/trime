@@ -1,0 +1,91 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: jiuyi_pinyin
+  name: 久以拼音
+  version: "1.0"
+  author:
+    - custom
+  description: |
+    久以拼音输入方案
+    支持简繁转换、全半角切换
+    支持九宫格/全键盘切换
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中文, 英文 ]
+  - name: full_shape
+    states: [ 半角, 全角 ]
+  - name: simplification
+    states: [ 漢字, 汉字 ]
+  - name: ascii_punct
+    states: [ 。，, ．， ]
+  - name: keyboard_mode
+    reset: 0
+    states: [ 全键盘, 九宫格 ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - table_translator
+    - script_translator
+  filters:
+    - simplifier
+    - uniquifier
+
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcba
+  delimiter: " '"
+  algebra:
+    - erase/^xx$/
+    - xform/^([zcs])h/$1/
+    - derive/^([zcs])([^h])/$1h$2/
+    - derive/([aeiou])ng$/$1gn/
+    - derive/([dtngkhrzcs])o(u|ng)$/$1o/
+    - derive/ong$/on/
+    - derive/ao$/oa/
+
+translator:
+  dictionary: jiuyi_pinyin
+  prism: jiuyi_pinyin
+  enable_user_dict: true
+  enable_sentence: true
+  enable_completion: true
+  sentence_over_completion: true
+  initial_quality: 1
+
+punctuator:
+  import_preset: symbols
+
+key_binder:
+  import_preset: default
+  bindings:
+    - { when: composing, accept: Tab, send: Page_Down }
+    - { when: composing, accept: Shift+Tab, send: Page_Up }
+    - { when: has_menu, accept: minus, send: Page_Up }
+    - { when: has_menu, accept: equal, send: Page_Down }
+    - { when: paging, accept: minus, send: Page_Up }
+    - { when: has_menu, accept: period, send: Page_Down }
+    - { when: always, accept: Control+Shift+4, toggle: keyboard_mode }
+
+recognizer:
+  import_preset: default
+  patterns:
+    punct: "^/([0-9]0?|[A-Za-z]+)$" 

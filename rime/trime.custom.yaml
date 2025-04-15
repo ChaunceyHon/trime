@@ -1,0 +1,101 @@
+# Trime custom settings
+# encoding: utf-8
+
+patch:
+  style:
+    keyboards:
+      - .default
+      - .number
+      - .symbols
+      - .nine_grid
+
+  preset_keyboards:
+    default:
+      name: "默认键盘"
+      author: "custom"
+      height: 55
+      keys:
+        # 第一行
+        - {click: q, label: Q}
+        - {click: w, label: W}
+        - {click: e, label: E}
+        - {click: r, label: R}
+        - {click: t, label: T}
+        - {click: y, label: Y}
+        - {click: u, label: U}
+        - {click: i, label: I}
+        - {click: o, label: O}
+        - {click: p, label: P}
+        # 第二行
+        - {click: a, label: A, offset_x: 0.5}
+        - {click: s, label: S}
+        - {click: d, label: D}
+        - {click: f, label: F}
+        - {click: g, label: G}
+        - {click: h, label: H}
+        - {click: j, label: J}
+        - {click: k, label: K}
+        - {click: l, label: L}
+        # 第三行
+        - {click: Shift, label: "⇧"}
+        - {click: z, label: Z}
+        - {click: x, label: X}
+        - {click: c, label: C}
+        - {click: v, label: V}
+        - {click: b, label: B}
+        - {click: n, label: N}
+        - {click: m, label: M}
+        - {click: BackSpace, label: "⌫"}
+        # 第四行
+        - {click: "中英", label: "中英"}
+        - {click: "123", label: "123"}
+        - {click: ",", label: ","}
+        - {click: space, label: "空格"}
+        - {click: ".", label: "."}
+        - {click: "中英", label: "中英"}
+        - {click: Return, label: "换行"}
+
+    nine_grid:
+      name: "九宫格"
+      author: "custom"
+      height: 55
+      keys:
+        # 第一行
+        - {click: "1", label: "1", hint: "分词"}
+        - {click: "2", label: "ABC"}
+        - {click: "3", label: "DEF"}
+        - {click: BackSpace, label: "⌫"}
+        # 第二行
+        - {click: "4", label: "GHI"}
+        - {click: "5", label: "JKL"}
+        - {click: "6", label: "MNO"}
+        - {click: "重输", label: "重输"}
+        # 第三行
+        - {click: "7", label: "PQRS"}
+        - {click: "8", label: "TUV"}
+        - {click: "9", label: "WXYZ"}
+        - {click: "0", label: "0"}
+        # 第四行
+        - {click: "符", label: "符"}
+        - {click: "123", label: "123"}
+        - {click: space, label: "空格"}
+        - {click: "中英", label: "中英"}
+        - {click: Return, label: "换行"}
+
+  "preset_color_schemes/default":
+    name: 默认配色
+    author: custom
+    back_color: 0xFFFFFF
+    border_color: 0xE0E0E0
+    text_color: 0x000000
+    hilited_text_color: 0x000000
+    hilited_back_color: 0xFFFFFF
+    hilited_candidate_text_color: 0xFFFFFF
+    hilited_candidate_back_color: 0xCE7539
+    candidate_text_color: 0x000000
+    comment_text_color: 0x808080
+    text_back_color: 0xFFFFFF
+    key_back_color: 0xFFFFFF
+    key_border_color: 0xE0E0E0
+    key_text_color: 0x000000
+    key_symbol_color: 0x808080 
