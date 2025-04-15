@@ -1,0 +1,112 @@
+# Trime 自定义
+patch:
+  "style/locale": zh_CN # 添加为汉语简体
+  "style/show_preview": true #按鍵提示
+  "style/show_comment": true #顯示提示區
+  "style/key_sound": false
+  "style/color_scheme": lost_temple
+  
+  # 键盘布局和切换按钮配置
+  "style/keyboard_type": default  # 默认使用全键盘
+  "style/keyboards": [nine_grid, default]  # 可用的键盘布局
+  "style/keyboard_switch_button": true  # 显示键盘切换按钮
+  "style/keyboard_switch_button_text": "切换"
+  "style/keyboard_switch_button_position": "right"
+  "style/keyboard_switch_button_width": 60
+  "style/keyboard_switch_button_height": 40
+  "style/keyboard_switch_button_margin": 5
+  "style/keyboard_switch_button_text_size": 16
+  "style/keyboard_switch_button_text_color": 0xFFFFFFFF
+  "style/keyboard_switch_button_background_color": 0x4D000000
+  "style/keyboard_switch_button_corner_radius": 4
+  "style/keyboard_switch_button_elevation": 2
+
+  # 九宫格键盘配置
+  "preset_keyboards/nine_grid":
+    name: 九宫格
+    author: "trime"
+    ascii_mode: 0
+    height: 44%
+    horizontal_gap: 1
+    vertical_gap: 1
+    round_corner: 4
+    keys:
+      - {click: ",", long_click: "，", swipe_up: "~", width: 10}
+      - {click: "1", label: "1", hint: "分词", width: 20}
+      - {click: "2", label: "2", hint: "ABC", width: 20}
+      - {click: "3", label: "3", hint: "DEF", width: 20}
+      - {click: BackSpace, width: 20}
+      - {click: "。", long_click: "。", swipe_up: ".", width: 10}
+      - {click: "4", label: "4", hint: "GHI", width: 20}
+      - {click: "5", label: "5", hint: "JKL", width: 20}
+      - {click: "6", label: "6", hint: "MNO", width: 20}
+      - {click: "重输", width: 20}
+      - {click: "?", long_click: "？", swipe_up: "/", width: 10}
+      - {click: "7", label: "7", hint: "PQRS", width: 20}
+      - {click: "8", label: "8", hint: "TUV", width: 20}
+      - {click: "9", label: "9", hint: "WXYZ", width: 20}
+      - {click: Return, width: 20}
+      - {click: "!", long_click: "！", swipe_up: "|", width: 10}
+      - {click: "Keyboard_switch", label: "123", width: 20}
+      - {click: "0", width: 20}
+      - {click: Space, width: 20}
+      - {click: "中/英", width: 20}
+
+  # 全键盘配置
+  "preset_keyboards/default":
+    name: 全键盘
+    author: "trime"
+    ascii_mode: 0
+    width: 10%
+    height: 44%
+    keys:
+      - [q, w, e, r, t, y, u, i, o, p]
+      - [a, s, d, f, g, h, j, k, l]
+      - [Shift, z, x, c, v, b, n, m, BackSpace]
+      - ["Keyboard_switch", "中/英", Space, "。", Return]
+
+  # 开关状态
+  "switches/@0/reset": 0
+  "switches/@0/states": [ 中文, 西文 ]
+  "switches/@1/states": [ 半角, 全角 ]
+  "switches/@2/reset": 1
+  "switches/@2/states": [ 漢字, 汉字 ]
+  "switches/@3/states": [ 。，, ．， ]
+  "switches/@4/reset": 0
+  "switches/@4/states": [ 九宫格, 全键盘 ]
+
+  style:
+    keyboard_type: default  # 默认使用全键盘
+    keyboards: [ nine_grid, default ]  # 可用的键盘布局
+    keyboard_switch_button: true  # 显示键盘切换按钮
+    keyboard_switch_button_position: right  # 按钮位置在右侧
+    keyboard_switch_button_size: 40  # 按钮大小
+
+  preset_keyboards:
+    nine_grid:
+      name: 九宫格
+      author: TRIME
+      width: 33%
+      height: 44%
+      keys:
+        - {click: 1, label: "1", hint: "一", swipe_up: "！"}
+        - {click: 2, label: "2", hint: "ABC", swipe_up: "@"}
+        - {click: 3, label: "3", hint: "DEF", swipe_up: "#"}
+        - {click: 4, label: "4", hint: "GHI", swipe_up: "$"}
+        - {click: 5, label: "5", hint: "JKL", swipe_up: "%"}
+        - {click: 6, label: "6", hint: "MNO", swipe_up: "^"}
+        - {click: 7, label: "7", hint: "PQRS", swipe_up: "&"}
+        - {click: 8, label: "8", hint: "TUV", swipe_up: "*"}
+        - {click: 9, label: "9", hint: "WXYZ", swipe_up: "("}
+        - {click: "Keyboard_switch", label: "切换"}
+        - {click: 0, label: "0", hint: "空格", swipe_up: ")"}
+        - {click: BackSpace, label: "删除"}
+
+    default:
+      name: 全键盘
+      author: TRIME
+      height: 44%
+      width: 10%
+      keys:
+        # ... existing code ...
+...
